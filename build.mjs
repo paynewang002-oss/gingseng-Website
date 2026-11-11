@@ -132,6 +132,7 @@ function render(language) {
   <title>${escape(c.title)}</title>
   <meta name="description" content="${escape(c.description)}">
   <meta name="theme-color" content="#214b41">
+  <link rel="icon" href="/images/ginseng-plant.jpg" type="image/jpeg">
   <link rel="canonical" href="${canonical}">
   ${languages.map(l => `<link rel="alternate" hreflang="${l.code}" href="${origin + l.path}">`).join('\n  ')}
   <link rel="alternate" hreflang="x-default" href="${origin}/">
