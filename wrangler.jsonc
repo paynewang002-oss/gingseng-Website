@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "ginseng-website",
+  "account_id": "eaf5c1fe54d3504461fc8f7d21b19b62",
   "compatibility_date": "2026-11-11",
   "workers_dev": true,
   "assets": {
