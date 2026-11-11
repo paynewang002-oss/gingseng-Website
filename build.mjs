@@ -13,7 +13,7 @@ const content = {
   en: {
     title: 'Changbai Mountain & Ginseng',
     description: 'Discover Changbai Mountain, its forests and the ginseng tradition of Northeast China. A simple introduction to Panax ginseng and its origins.',
-    brand: 'Changbai Ginseng', nav: 'Discover the region',
+    brand: 'Changbaishan Ginseng', nav: 'Discover the region',
     heading: 'Discover Changbai Mountain and ginseng',
     intro: 'Get to know Changbai Mountain and the ginseng rooted in its landscape and culture.',
     explore: 'Discover Changbai', lake: 'Tianchi, the crater lake of Changbai Mountain',
@@ -29,7 +29,7 @@ const content = {
     sources: ['Ginseng-growing regions of Jilin', 'Ginseng cultivation in the Changbai Mountain region', 'Panax ginseng botanical record'],
     photos: 'Photography', mountainCredit: 'Tianchi by 颐园新居', plantCredit: 'Ginseng plant by Doge24190',
     photoNote: 'Images resized for display.', footer: 'An introduction to Changbai Mountain and ginseng.',
-    language: 'Choose language', skip: 'Skip to content'
+    language: 'Choose language', skip: 'Skip to content', contact: 'Contact us'
   },
   ja: {
     title: '長白山と高麗人参',
@@ -49,7 +49,7 @@ const content = {
     sourceTitle: '出典と写真', sources: ['吉林省の人参産地', '長白山地域の人参栽培', 'Panax ginseng の植物情報'],
     photos: '写真', mountainCredit: '天池の写真 颐园新居', plantCredit: '人参の写真 Doge24190',
     photoNote: '表示用に画像サイズを調整しています。', footer: '長白山と人参を知るための入門サイト。',
-    language: '言語を選択', skip: '本文へ移動'
+    language: '言語を選択', skip: '本文へ移動', contact: 'お問い合わせ'
   },
   ko: {
     title: '창바이산과 인삼',
@@ -69,7 +69,7 @@ const content = {
     sourceTitle: '출처 및 사진', sources: ['지린성의 인삼 산지', '창바이산 지역의 인삼 재배', 'Panax ginseng 식물 정보'],
     photos: '사진', mountainCredit: '천지 사진 颐园新居', plantCredit: '인삼 사진 Doge24190',
     photoNote: '화면 표시에 맞게 이미지 크기를 조정했습니다.', footer: '창바이산과 인삼을 알아가는 안내서.',
-    language: '언어 선택', skip: '본문으로 이동'
+    language: '언어 선택', skip: '본문으로 이동', contact: '문의하기'
   },
   'zh-Hans': {
     title: '长白山与人参',
@@ -89,7 +89,7 @@ const content = {
     sourceTitle: '资料来源与图片署名', sources: ['吉林省人参产区介绍', '长白山地区人参栽培历史', '人参植物分类资料'],
     photos: '图片', mountainCredit: '天池摄影 颐园新居', plantCredit: '人参摄影 Doge24190',
     photoNote: '图片已调整为网页显示尺寸。', footer: '一份关于长白山与人参的入门介绍。',
-    language: '选择语言', skip: '跳转到正文'
+    language: '选择语言', skip: '跳转到正文', contact: '联系我们'
   },
   'zh-Hant': {
     title: '長白山與人參',
@@ -109,7 +109,7 @@ const content = {
     sourceTitle: '資料來源與圖片署名', sources: ['吉林省人參產區介紹', '長白山地區人參栽培歷史', '人參植物分類資料'],
     photos: '圖片', mountainCredit: '天池攝影 颐园新居', plantCredit: '人參攝影 Doge24190',
     photoNote: '圖片已調整為網頁顯示尺寸。', footer: '一份關於長白山與人參的入門介紹。',
-    language: '選擇語言', skip: '跳轉至正文'
+    language: '選擇語言', skip: '跳轉至正文', contact: '聯絡我們'
   }
 };
 
@@ -141,12 +141,16 @@ function render(language) {
   <meta property="og:url" content="${canonical}">
   <meta property="og:image" content="${origin}/images/changbai-tianchi.jpg">
   <link rel="stylesheet" href="/style.css">
+  <script src="/site.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#main">${c.skip}</a>
   <header>
     <a class="brand" href="${language.path}">${c.brand}</a>
-    <nav aria-label="${c.language}">${languages.map(l => `<a href="${l.path}" lang="${l.code}" hreflang="${l.code}"${l.code === language.code ? ' aria-current="page"' : ''}>${l.label}</a>`).join('')}</nav>
+    <details class="language-menu">
+      <summary aria-label="${c.language}" title="${c.language}"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path></svg></summary>
+      <nav aria-label="${c.language}">${languages.map(l => `<a href="${l.path}" lang="${l.code}" hreflang="${l.code}"${l.code === language.code ? ' aria-current="page"' : ''}>${l.label}</a>`).join('')}</nav>
+    </details>
   </header>
   <main id="main">
     <section class="hero">
@@ -156,7 +160,7 @@ function render(language) {
     <section class="region" id="region"><h2>${c.placeTitle}</h2><div><p>${c.place}</p><p>${c.history}</p></div></section>
     <section class="plant"><figure><img src="/images/ginseng-plant.jpg" width="960" height="1440" loading="lazy" alt="${c.plantCaption}"><figcaption>${c.plantCaption}</figcaption></figure><div class="plant-copy"><h2>${c.plantTitle}</h2><p>${c.plant}</p><div class="origin-note"><h3>${c.noteTitle}</h3><p>${c.note}</p></div></div></section>
   </main>
-  <footer><p>${c.footer}</p><details><summary>${c.sourceTitle}</summary><ul>${sources.map((url, i) => `<li><a href="${url}">${c.sources[i]}</a></li>`).join('')}</ul><p>${c.photos} <a href="https://commons.wikimedia.org/wiki/File:Tianchi_Lake_of_Changbai_20130714.jpeg">${c.mountainCredit}</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a><br><a href="https://commons.wikimedia.org/wiki/File:Ginseng_flower_in_Changbai_Mountain.jpg">${c.plantCredit}</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p><p>${c.photoNote}</p></details></footer>
+  <footer><div><p>${c.footer}</p><p class="contact"><span>${c.contact}</span><a href="mailto:service@changbaishanginseng.com">service@changbaishanginseng.com</a></p></div><details><summary>${c.sourceTitle}</summary><ul>${sources.map((url, i) => `<li><a href="${url}">${c.sources[i]}</a></li>`).join('')}</ul><p>${c.photos} <a href="https://commons.wikimedia.org/wiki/File:Tianchi_Lake_of_Changbai_20130714.jpeg">${c.mountainCredit}</a> · <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a><br><a href="https://commons.wikimedia.org/wiki/File:Ginseng_flower_in_Changbai_Mountain.jpg">${c.plantCredit}</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></p><p>${c.photoNote}</p></details></footer>
 </body></html>`;
 }
 
@@ -168,6 +172,6 @@ for (const language of languages) {
 
 await writeFile('public/robots.txt', `User-agent: *\nAllow: /\nSitemap: ${origin}/sitemap.xml\n`);
 await writeFile('public/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${languages.map(l => `  <url><loc>${origin + l.path}</loc></url>`).join('\n')}\n</urlset>\n`);
-await writeFile('public/404.html', '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found</title><link rel="stylesheet" href="/style.css"><main class="not-found"><h1>Page not found</h1><p><a href="/">Return to Changbai Ginseng</a></p></main></html>');
+await writeFile('public/404.html', '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found</title><link rel="stylesheet" href="/style.css"><main class="not-found"><h1>Page not found</h1><p><a href="/">Return to Changbaishan Ginseng</a></p></main></html>');
 await writeFile('public/_headers', '/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n');
 console.log(`Built ${languages.length} language versions.`);

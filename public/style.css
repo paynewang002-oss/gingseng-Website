@@ -57,20 +57,60 @@ header {
   font-weight: 600;
   text-decoration: none;
 }
-nav {
-  display: flex;
-  gap: 22px;
-  align-items: center;
-  flex-wrap: wrap;
-  font-size: 14px;
+.language-menu {
+  position: relative;
+  flex-shrink: 0;
+}
+.language-menu summary {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  list-style: none;
+}
+.language-menu summary:hover {
+  background: var(--mist);
+}
+.language-menu summary::-webkit-details-marker {
+  display: none;
+}
+.language-menu svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+.language-menu nav {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  z-index: 10;
+  display: grid;
+  min-width: 174px;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(32, 61, 53, .12);
+  font-size: 15px;
+}
+.language-menu:not([open]) nav {
+  display: none;
 }
 nav a {
+  padding: 9px 12px;
   text-decoration: none;
   color: var(--muted);
   white-space: nowrap;
 }
+nav a:hover {
+  background: var(--mist);
+}
 nav a[aria-current] {
   color: var(--forest);
+  background: var(--paper);
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
@@ -209,8 +249,15 @@ footer {
   font-size: 14px;
   color: var(--muted);
 }
-footer>p {
+footer>div>p {
   margin: 0;
+}
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  row-gap: 3px;
+  margin-top: 12px;
 }
 footer details {
   max-width: 570px;
@@ -238,12 +285,8 @@ html:lang(ja) h2,html:lang(ko) h2,html:lang(zh-Hans) h2,html:lang(zh-Hant) h2 {
 }
 @media(max-width:900px) {
   header {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
     padding: 24px 6%;
-  }
-  nav {
-    gap: 18px;
   }
   .hero {
     grid-template-columns: 1fr 1fr;
@@ -272,10 +315,6 @@ html:lang(ja) h2,html:lang(ko) h2,html:lang(zh-Hans) h2,html:lang(zh-Hant) h2 {
   }
   header {
     gap: 19px;
-  }
-  nav {
-    gap: 16px;
-    font-size: 13px;
   }
   .brand {
     font-size: 22px;
