@@ -176,3 +176,4 @@ await writeFile('public/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<
 await writeFile('public/404.html', '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found</title><link rel="stylesheet" href="/style.css"><main class="not-found"><h1>Page not found</h1><p><a href="/">Return to Changbaishan Ginseng</a></p></main></html>');
 await writeFile('public/_headers', '/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n');
 console.log(`Built ${languages.length} language versions.`);
+await import('./build-storefront.mjs');

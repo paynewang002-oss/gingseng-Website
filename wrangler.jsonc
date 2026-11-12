@@ -1,13 +1,30 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "ginseng-website",
+  "main": "worker.mjs",
   "account_id": "eaf5c1fe54d3504461fc8f7d21b19b62",
   "compatibility_date": "2026-11-11",
   "workers_dev": true,
   "assets": {
     "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/account", "/account/*", "/products/*", "/ja/products/*", "/ko/products/*", "/zh-hans/products/*", "/zh-hant/products/*"],
     "not_found_handling": "404-page"
   },
+  "vars": {
+    "SHOPIFY_STORE_DOMAIN": "76wrav-pz.myshopify.com",
+    "SHOPIFY_CLIENT_ID": "8392dbe866975c5058d98a5deacb4a9d",
+    "SHOPIFY_ACCOUNT_URL": "https://shopify.com/81127211146/account",
+    "CHECKOUT_ENABLED": "false"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ginseng-customers",
+      "database_id": "4dd81e6f-2201-49b4-a94e-390f6d2cf77a"
+    }
+  ],
+  "triggers": { "crons": ["0 */6 * * *"] },
   "routes": [
     { "pattern": "changbaishanginseng.com", "custom_domain": true },
     { "pattern": "www.changbaishanginseng.com", "custom_domain": true }
