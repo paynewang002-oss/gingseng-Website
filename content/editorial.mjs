@@ -189,61 +189,106 @@ export const articles = [
 ];
 
 export const about = {
-  image: '/images/owned-base-ginseng.jpg',
-  gallery: ['/images/owned-sowing.jpg', '/images/owned-harvest.jpg', '/images/owned-root-in-forest.jpg', '/images/owned-museum.jpg'],
-  merchantName: '吉林白山传奇生态农业科技有限公司',
-  email: 'service@changbaishanginseng.com',
-  phone: '+86 15500376880',
-  address: '吉林省通化市集安市麻线药业工业区白山传奇工厂',
-  translations: {
-    en: {
-      title: 'Our roots in Changbaishan',
-      description: 'A family ginseng business rooted in Jilin, with decades of experience and a forest-cultivation base in the Changbai Mountain region.',
-      sections: [
-        { heading: 'A family connection to ginseng', paragraphs: ['Changbaishan Ginseng draws on our family’s decades of work in the ginseng trade. Our experience begins with the growing place and continues through harvesting, processing and supply. We are based in Ji’an, Jilin, in the Changbai Mountain region of Northeast China.'] },
-        { heading: 'From the forest', paragraphs: ['Our family’s forest ginseng base covers 60,000 mu, approximately 4,000 hectares. The photographs on this website come from our project archive and show the woodland, ginseng plants, cultivation work and harvesting that inform our everyday understanding of the root.'] },
-        { heading: 'For your table and your business', paragraphs: ['We offer ginseng for individual customers and welcome inquiries about larger orders. Tell us the product form, quantity and destination you have in mind. We can discuss specifications, packaging and delivery arrangements with you.'] },
-        { heading: 'Share a question', paragraphs: ['Use the form below to leave your email and a message. You can ask about a product, a growing method or a wholesale order. Our team aims to make its first reply within two business days.'] }
+  "image": "/images/owned-base-ginseng.jpg",
+  "gallery": [
+    "/images/owned-sowing.jpg",
+    "/images/owned-harvest.jpg",
+    "/images/owned-root-in-forest.jpg",
+    "/images/owned-museum.jpg"
+  ],
+  "merchantName": "吉林白山传奇生态农业科技有限公司",
+  "email": "service@changbaishanginseng.com",
+  "phone": "+86 15500376880",
+  "address": "吉林省通化市集安市麻线药业工业区白山传奇工厂",
+  "translations": {
+    "en": {
+      "title": "About us",
+      "description": "Jilin Baishan Chuanqi Health Pharmaceutical Co., Ltd. was established in 2005 and is headquartered in Ji’an, Jilin.",
+      "sections": [
+        {
+          "heading": "Company profile",
+          "paragraphs": [
+            "Located in the Changbai Mountain region, the company operates a 60,000-mu forest-cultivated ginseng base, approximately 4,000 hectares. It has extensive experience in forest management and the harvesting and processing of forest-grown ginseng, with capabilities spanning production, supply, sales and quality control."
+          ]
+        },
+        {
+          "heading": "Our commitment",
+          "paragraphs": [
+            "The company is committed to preserving and developing the traditions of forest-grown ginseng and advancing the modernization of the industry."
+          ]
+        }
       ]
     },
-    ja: {
-      title: '長白山に根づく私たちの歩み',
-      description: '吉林省で長年人参に携わってきた家族の経験と、長白山地域の林下栽培基地を紹介します。',
-      sections: [
-        { heading: '家族と人参のつながり', paragraphs: ['Changbaishan Ginsengは、何十年にもわたり人参の商いに携わってきた家族の経験を土台にしています。生育地から収穫、加工、供給まで、人参と向き合ってきました。拠点は中国東北部の長白山地域に位置する吉林省集安市です。'] },
-        { heading: '森林から届く物語', paragraphs: ['私たちの家族が持つ林下人参基地の面積は6万ムー、約4,000ヘクタールです。このサイトの実景写真はプロジェクトの写真資料から選び、森林、人参の植物、栽培作業や収穫の様子を紹介しています。'] },
-        { heading: 'ご家庭にも、お仕事にも', paragraphs: ['個人のお客様向けに人参を販売し、大口注文のお問い合わせも承ります。ご希望の形状、数量、お届け先をお知らせください。仕様、包装、配送方法についてご相談いただけます。'] },
-        { heading: 'お気軽にお問い合わせください', paragraphs: ['下のフォームにメールアドレスとメッセージをご記入ください。商品、栽培方法、卸売のご相談をお待ちしています。担当チームは2営業日以内の初回返信を目指しています。'] }
+    "ja": {
+      "title": "私たちについて",
+      "description": "吉林白山传奇健康药业有限公司は2005年に設立され、吉林省集安市に本社を置いています。",
+      "sections": [
+        {
+          "heading": "会社概要",
+          "paragraphs": [
+            "長白山の豊かな自然環境を生かし、6万ムー、約4,000ヘクタールの自然林下人参栽培基地を有しています。長年にわたり森林管理、林下人参の採取・加工の経験を蓄積し、生産、供給、販売および品質管理の体制を整えています。"
+          ]
+        },
+        {
+          "heading": "企業方針",
+          "paragraphs": [
+            "林下人参産業の伝統の継承と発展に取り組み、その現代化を推進しています。"
+          ]
+        }
       ]
     },
-    ko: {
-      title: '창바이산에 뿌리를 둔 이야기',
-      description: '오랜 세월 인삼을 다뤄 온 가족의 경험과 지린성 창바이산 지역의 산림 재배 기반을 소개합니다.',
-      sections: [
-        { heading: '가족과 인삼의 오랜 인연', paragraphs: ['Changbaishan Ginseng은 수십 년 동안 인삼을 거래해 온 우리 가족의 경험을 바탕으로 합니다. 재배 산지에서 수확, 가공과 공급까지 인삼을 다뤄 왔습니다. 우리의 거점은 중국 동북부 창바이산 지역에 있는 지린성 지안시입니다.'] },
-        { heading: '숲에서 시작되는 이야기', paragraphs: ['우리 가족의 산림 인삼 재배 기반은 6만 무, 약 4,000헥타르 규모입니다. 웹사이트의 현장 사진은 프로젝트 사진 자료에서 골랐으며, 숲과 인삼 식물, 재배 작업과 수확 과정을 담고 있습니다.'] },
-        { heading: '개인 구매와 사업 문의', paragraphs: ['개인 고객을 위한 인삼을 판매하며 대량 주문 문의도 환영합니다. 원하는 제품 형태, 수량과 배송지를 알려주세요. 명세, 포장과 배송 방법을 함께 논의할 수 있습니다.'] },
-        { heading: '궁금한 점을 남겨주세요', paragraphs: ['아래 양식에 이메일과 메시지를 남겨주세요. 상품, 재배 방식이나 도매 주문에 관해 문의할 수 있습니다. 담당 팀은 영업일 기준 2일 이내에 첫 답변을 드리는 것을 목표로 합니다.'] }
+    "ko": {
+      "title": "회사 소개",
+      "description": "지린 바이산촨치 건강약업유한공사(吉林白山传奇健康药业有限公司)는 2005년에 설립되었으며, 지린성 지안시에 본사를 두고 있습니다.",
+      "sections": [
+        {
+          "heading": "기업 개요",
+          "paragraphs": [
+            "창바이산의 자연환경을 바탕으로 6만 무, 약 4,000헥타르 규모의 자연 산림 인삼 재배 기지를 보유하고 있습니다. 오랜 기간 산림 관리와 산양삼 채취·가공 경험을 축적해 왔으며, 생산·공급·판매 및 품질 관리 역량을 갖추고 있습니다."
+          ]
+        },
+        {
+          "heading": "기업 방향",
+          "paragraphs": [
+            "산양삼 산업의 전통을 계승하고 발전시키며 산업의 현대화를 추진하고 있습니다."
+          ]
+        }
       ]
     },
-    'zh-Hans': {
-      title: '扎根长白山的人参事业',
-      description: '了解我们家族几十年的人参经营积累，以及位于吉林长白山地区的林下参基地。',
-      sections: [
-        { heading: '家族与人参的长期联系', paragraphs: ['Changbaishan Ginseng依托家族几十年的人参经营经验。从生长产地，到采挖、加工与供应，我们持续与人参打交道。我们的所在地是中国东北长白山地区的吉林省集安市。'] },
-        { heading: '从森林开始了解', paragraphs: ['我们家族的林下参基地面积为6万亩，约合4,000公顷。网站中的实景照片选自项目图库，记录了森林环境、人参植株、种植作业与采挖过程，帮助你了解一支参背后的生长场景。'] },
-        { heading: '面向个人与批量采购', paragraphs: ['我们为个人消费者提供人参产品，也欢迎批量采购咨询。你可以告诉我们需要的产品形态、数量与收货地区，一起讨论规格、包装和配送安排。'] },
-        { heading: '留下你的问题', paragraphs: ['在下方填写邮箱与留言，可以咨询产品、种植方式或批发订单。我们的团队以2个工作日内首次回复为目标。'] }
+    "zh-Hans": {
+      "title": "关于我们",
+      "description": "吉林白山传奇健康药业有限公司成立于2005年，总部位于吉林省集安市。",
+      "sections": [
+        {
+          "heading": "公司概况",
+          "paragraphs": [
+            "公司依托长白山得天独厚的生态环境，拥有6万亩原生态林下参基地。多年来积累了丰富的原始林地管理以及野山参采挖、加工经验，具备规模化的野山参产供销能力以及产品品控能力。"
+          ]
+        },
+        {
+          "heading": "企业方向",
+          "paragraphs": [
+            "公司致力于引领野山参行业传承与发展，推动野山参的现代化进程。"
+          ]
+        }
       ]
     },
-    'zh-Hant': {
-      title: '紮根長白山的人參事業',
-      description: '了解我們家族幾十年的人參經營積累，以及位於吉林長白山地區的林下參基地。',
-      sections: [
-        { heading: '家族與人參的長期聯繫', paragraphs: ['Changbaishan Ginseng依托家族幾十年的人參經營經驗。從生長產地，到採挖、加工與供應，我們持續與人參打交道。我們的所在地是中國東北長白山地區的吉林省集安市。'] },
-        { heading: '從森林開始了解', paragraphs: ['我們家族的林下參基地面積為6萬畝，約合4,000公頃。網站中的實景照片選自專案圖庫，記錄了森林環境、人參植株、種植作業與採挖過程，幫助你了解一支參背後的生長場景。'] },
-        { heading: '面向個人與批量採購', paragraphs: ['我們為個人消費者提供人參產品，也歡迎批量採購諮詢。你可以告訴我們需要的產品形態、數量與收貨地區，一起討論規格、包裝和配送安排。'] },
-        { heading: '留下你的問題', paragraphs: ['在下方填寫郵箱與留言，可以諮詢產品、種植方式或批發訂單。我們的團隊以2個工作日內首次回覆為目標。'] }
+    "zh-Hant": {
+      "title": "關於我們",
+      "description": "吉林白山傳奇健康藥業有限公司成立於2005年，總部位於吉林省集安市。",
+      "sections": [
+        {
+          "heading": "公司概況",
+          "paragraphs": [
+            "公司依託長白山得天獨厚的生態環境，擁有6萬畝原生態林下參基地。多年來積累了豐富的原始林地管理以及野山參採挖、加工經驗，具備規模化的野山參產供銷能力以及產品品控能力。"
+          ]
+        },
+        {
+          "heading": "企業方向",
+          "paragraphs": [
+            "公司致力於引領野山參行業傳承與發展，推動野山參的現代化進程。"
+          ]
+        }
       ]
     }
   }

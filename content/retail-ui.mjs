@@ -6,9 +6,7 @@ export const retailUi = {
     cardDetails: { white: 'Acrylic box, 60g or 100g', whole: 'Gift box, 80g', forest: 'Red gift box, 15g' },
     scenes: ['Planting among the trees', 'Ginseng harvesting'],
     homeHeading: 'Changbai Mountain and ginseng', origin: 'Jilin, Northeast China',
-    family: 'Our family has worked in the ginseng trade for decades.',
-    base: '60,000 mu of forest cultivation, approximately 4,000 hectares.',
-    location: 'Ji’an, Jilin, China', knowledgeSoon: 'Articles will be added here.'
+    knowledgeSoon: 'Articles will be added here.'
   },
   ja: {
     viewProduct: '商品を見る', loadingProduct: '商品を読み込み中', productNotFound: 'この商品は現在お取り扱いできません',
@@ -17,9 +15,7 @@ export const retailUi = {
     cardDetails: { white: 'アクリル箱、60gまたは100g', whole: 'ギフトボックス、80g', forest: '赤いギフトボックス、15g' },
     scenes: ['木々の間での播種作業', '人参の収穫'],
     homeHeading: '長白山と人参', origin: '中国東北部・吉林省',
-    family: '私たちの家族は何十年も人参の商いに携わってきました。',
-    base: '林下栽培基地は6万ムー、約4,000ヘクタール。',
-    location: '中国吉林省集安市', knowledgeSoon: '記事を順次掲載します。'
+    knowledgeSoon: '記事を順次掲載します。'
   },
   ko: {
     viewProduct: '제품 보기', loadingProduct: '제품 불러오는 중', productNotFound: '현재 이 제품을 구매할 수 없습니다',
@@ -28,9 +24,7 @@ export const retailUi = {
     cardDetails: { white: '아크릴 상자, 60g 또는 100g', whole: '선물 상자, 80g', forest: '붉은 선물 상자, 15g' },
     scenes: ['나무 사이에서 씨를 심는 작업', '인삼 수확'],
     homeHeading: '창바이산과 인삼', origin: '중국 동북부 지린성',
-    family: '우리 가족은 수십 년 동안 인삼을 다뤄 왔습니다.',
-    base: '산림 재배 기반 6만 무, 약 4,000헥타르.',
-    location: '중국 지린성 지안시', knowledgeSoon: '글을 차례로 게시할 예정입니다.'
+    knowledgeSoon: '글을 차례로 게시할 예정입니다.'
   },
   'zh-Hans': {
     viewProduct: '查看产品', loadingProduct: '正在读取产品', productNotFound: '这款产品当前无法购买',
@@ -39,9 +33,7 @@ export const retailUi = {
     cardDetails: { white: '亚克力盒，60g或100g', whole: '礼盒装，80g', forest: '红色礼盒，15g' },
     scenes: ['山林间的播种作业', '人参采挖'],
     homeHeading: '长白山与人参', origin: '中国东北，吉林',
-    family: '我们家做了几十年的人参生意。',
-    base: '6万亩林下参基地，约合4,000公顷。',
-    location: '中国吉林省集安市', knowledgeSoon: '文章将陆续更新。'
+    knowledgeSoon: '文章将陆续更新。'
   },
   'zh-Hant': {
     viewProduct: '查看產品', loadingProduct: '正在讀取產品', productNotFound: '這款產品目前無法購買',
@@ -50,8 +42,6 @@ export const retailUi = {
     cardDetails: { white: '亞克力盒，60g或100g', whole: '禮盒裝，80g', forest: '紅色禮盒，15g' },
     scenes: ['山林間的播種作業', '人參採挖'],
     homeHeading: '長白山與人參', origin: '中國東北，吉林',
-    family: '我們家做了幾十年的人參生意。',
-    base: '6萬畝林下參基地，約合4,000公頃。',
-    location: '中國吉林省集安市', knowledgeSoon: '文章將陸續更新。'
+    knowledgeSoon: '文章將陸續更新。'
   }
 };
