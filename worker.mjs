@@ -1,5 +1,6 @@
 const API_VERSION = '2026-10';
 const POLICY_VERSION = '2026-11-12';
+const MAX_CART_LINES = 50;
 const SITE_ORIGIN = 'https://changbaishanginseng.com';
 const ALLOWED_ORIGINS = new Set([SITE_ORIGIN, 'https://www.changbaishanginseng.com']);
 const CURRENCIES = ['USD', 'JPY', 'KRW', 'HKD', 'SGD', 'CNY'];
@@ -328,7 +329,7 @@ async function productsResponse(request, env) {
 }
 
 function cartLines(input) {
-  if (!Array.isArray(input) || input.length < 1 || input.length > 20) {
+  if (!Array.isArray(input) || input.length < 1 || input.length > MAX_CART_LINES) {
     throw new HttpError(400, 'INVALID_CART', 'Please check the products in your bag.');
   }
   const quantities = new Map();
@@ -343,6 +344,24 @@ function cartLines(input) {
   return Array.from(quantities, ([merchandiseId, quantity]) => ({ merchandiseId, quantity }));
 }
 
+function visitorConsent(request, input) {
+  if (input !== undefined && (!input || typeof input !== 'object' || Array.isArray(input))) {
+    throw new HttpError(400, 'INVALID_CONSENT', 'Please check your privacy choices.');
+  }
+  const choices = {};
+  for (const [key, value] of Object.entries(input || {})) {
+    if (!['analytics', 'preferences', 'marketing', 'saleOfData'].includes(key) || typeof value !== 'boolean') {
+      throw new HttpError(400, 'INVALID_CONSENT', 'Please check your privacy choices.');
+    }
+    choices[key] = value;
+  }
+  if (request.headers.get('Sec-GPC') === '1') {
+    choices.marketing = false;
+    choices.saleOfData = false;
+  }
+  return Object.keys(choices).length ? choices : null;
+}
+
 async function checkout(request, env) {
   requireSameOrigin(request);
   const body = await readJson(request);
@@ -351,13 +370,14 @@ async function checkout(request, env) {
   const lines = cartLines(body.lines);
   const displayCurrency = CURRENCIES.includes(body.displayCurrency) ? body.displayCurrency : 'USD';
   const language = shopifyLanguage(body.locale);
+  const privacy = visitorConsent(request, body.visitorConsent);
   await rateLimit(request, env, 'checkout', 30);
-  const data = await storefront(env, `mutation Checkout($input: CartInput!, $language: LanguageCode!) @inContext(country: US, language: $language) {
+  const data = await storefront(env, `mutation Checkout($input: CartInput!, $language: LanguageCode!, $visitorConsent: VisitorConsent) @inContext(country: US, language: $language, visitorConsent: $visitorConsent) {
     cartCreate(input: $input) {
-      cart { checkoutUrl totalQuantity lines(first: 20) { nodes { quantity merchandise { ... on ProductVariant { id } } } } }
+      cart { checkoutUrl totalQuantity lines(first: ${MAX_CART_LINES}) { nodes { quantity merchandise { ... on ProductVariant { id } } } } }
       userErrors { code message }
     }
-  }`, { input: { lines, attributes: [{ key: 'Display currency', value: displayCurrency }] }, language });
+  }`, { input: { lines, attributes: [{ key: 'Display currency', value: displayCurrency }] }, language, visitorConsent: privacy });
   const result = data.cartCreate;
   if (result.userErrors?.length || !result.cart) throw new HttpError(409, 'CART_UNAVAILABLE', 'A product or quantity is unavailable. Please review your bag.');
   const expected = new Map(lines.map(line => [line.merchandiseId, line.quantity]));
@@ -736,4 +756,4 @@ export default {
   }
 };
 
-export { cartLines, csvCell, emailValue, hmacValid, syncCustomers };
+export { cartLines, csvCell, emailValue, hmacValid, syncCustomers, visitorConsent };

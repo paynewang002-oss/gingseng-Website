@@ -411,7 +411,7 @@
     button.disabled = true;
     status.textContent = c.loading;
     try {
-      const response = await fetch('/api/checkout', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ lines: cart.map(line => ({ variantId: line.variantId, quantity: line.quantity })), currency: 'USD', displayCurrency: currency, locale: page.locale }) });
+      const response = await fetch('/api/checkout', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ lines: cart.map(line => ({ variantId: line.variantId, quantity: line.quantity })), currency: 'USD', displayCurrency: currency, locale: page.locale, visitorConsent: checkoutPrivacyChoices() }) });
       const result = await response.json();
       if (!response.ok || !result.checkoutUrl) throw new Error('checkout_unavailable');
       const url = new URL(result.checkoutUrl);
@@ -461,9 +461,15 @@
     return { analytics: consent?.analytics === true, marketing: !gpc && consent?.marketing === true, preferences: true, sale_of_data: !gpc && consent?.marketing === true };
   }
 
+  function checkoutPrivacyChoices() {
+    if (!consent && !gpc) return undefined;
+    const choices = trackingChoices();
+    if (!consent) return { marketing: false, saleOfData: false };
+    return { analytics: choices.analytics, preferences: choices.preferences, marketing: choices.marketing, saleOfData: choices.sale_of_data };
+  }
+
   function applyTrackingChoices() {
     const choices = trackingChoices();
-    if (typeof window.Shopify?.customerPrivacy?.setTrackingConsent === 'function') window.Shopify.customerPrivacy.setTrackingConsent(choices, () => {});
     window.dispatchEvent(new CustomEvent('ginseng:privacy', { detail: choices }));
     const measurementId = config.googleAnalyticsId;
     if (!/^G-[A-Z0-9]+$/.test(measurementId || '')) return;

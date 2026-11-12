@@ -155,7 +155,7 @@ const en = {
         heading: 'Shopify enhanced services',
         paragraphs: [
           'Where Shopify Network Intelligence is enabled for our store, Shopify processes information about interactions with our store together with interactions with other merchants and Shopify to provide enhanced services, including personalization and advertising-related features. Read the [Shopify Consumer Privacy Policy](https://www.shopify.com/legal/privacy/consumers).',
-          'Some uses can be treated as data sharing or targeted advertising under applicable US state privacy laws. You can exercise the available choices through [privacy choices](#privacy-choices) and [Shopify’s privacy portal](https://privacy.shopify.com/).'
+          'Some uses can be treated as data sharing or targeted advertising under applicable US state privacy laws. Manage Shopify account and platform-level choices through [Shopify’s privacy portal](https://privacy.shopify.com/).'
         ]
       },
       {
@@ -183,7 +183,7 @@ const en = {
       {
         heading: 'Privacy choices',
         paragraphs: [
-          'Use the privacy controls on this page to review optional cookies and data-sharing choices. Supported Global Privacy Control signals are applied to the relevant sharing or advertising choices where required.',
+          'Use [privacy choices](#privacy-choices) to manage optional tracking on this website. Supported Global Privacy Control signals set the relevant website advertising and data-sharing preferences to opt out. When checkout is available, saved choices are passed to Shopify for that checkout.',
           `You can also send a privacy choice or complaint to [${email}](mailto:${email}). Shopify-specific choices are available through [Shopify’s privacy portal](https://privacy.shopify.com/).`,
           'Material changes to our data practices will be reflected in this notice and communicated when applicable law requires it.'
         ]
@@ -389,7 +389,7 @@ const zhHans = {
         heading: 'Shopify增强服务',
         paragraphs: [
           '店铺启用Shopify Network Intelligence时，Shopify会将您与本店的互动资料，与您和其他商家及Shopify的互动资料结合，用于个性化及广告相关等增强服务。详情见[Shopify消费者隐私政策](https://www.shopify.com/legal/privacy/consumers)。',
-          '部分用途可能被适用的美国州隐私法认定为资料共享或定向广告。您可通过[隐私选择](#privacy-choices)及[Shopify隐私门户](https://privacy.shopify.com/)行使相应选择。'
+          '部分用途可能被适用的美国州隐私法认定为资料共享或定向广告。Shopify账户及平台层面的选择可通过[Shopify隐私门户](https://privacy.shopify.com/)管理。'
         ]
       },
       {
@@ -417,7 +417,7 @@ const zhHans = {
       {
         heading: '隐私选择',
         paragraphs: [
-          '您可通过本页隐私控制查看可选Cookie及资料共享选择。在法律要求的范围内，受支持的全球隐私控制信号会应用于对应的共享或广告选择。',
+          '您可通过[隐私选择](#privacy-choices)管理本网站的可选追踪。受支持的全球隐私控制信号会将本网站对应的广告及资料共享偏好设为退出。结账开放后，已保存的选择会传递给Shopify用于该次结账。',
           `也可通过 [${email}](mailto:${email}) 提交隐私选择或投诉。Shopify相关选择可在[Shopify隐私门户](https://privacy.shopify.com/)办理。`,
           '资料处理方式发生重大变化时，本政策会相应更新，并按适用法律要求通知您。'
         ]
@@ -572,7 +572,7 @@ const zhHant = {
       ] },
       { heading: 'Shopify增強服務', paragraphs: [
         '店鋪啟用Shopify Network Intelligence時，Shopify會將您與本店的互動資料，與您和其他商家及Shopify的互動資料結合，用於個人化及廣告相關等增強服務。詳情見[Shopify消費者隱私政策](https://www.shopify.com/legal/privacy/consumers)。',
-        '部分用途可能被適用的美國州隱私法認定為資料共享或定向廣告。您可透過[隱私選擇](#privacy-choices)及[Shopify隱私入口](https://privacy.shopify.com/)行使相應選擇。'
+        '部分用途可能被適用的美國州隱私法認定為資料共享或定向廣告。Shopify帳戶及平台層面的選擇可透過[Shopify隱私入口](https://privacy.shopify.com/)管理。'
       ] },
       { heading: 'Cookie與可選統計', paragraphs: [
         '必要Cookie及類似儲存用於購物車、登入、安全及保存偏好。可選統計和廣告技術按網站提供的選擇及您所在地的適用要求運行。',
@@ -588,7 +588,7 @@ const zhHant = {
         `請將請求傳送至 [${email}](mailto:${email})。我們通常在兩個工作天內確認收到諮詢，並在適用法定期限內處理。`
       ] },
       { heading: '隱私選擇', paragraphs: [
-        '您可透過本頁隱私控制查看可選Cookie及資料共享選擇。在法律要求的範圍內，受支援的全球隱私控制訊號會套用於對應的共享或廣告選擇。',
+        '您可透過[隱私選擇](#privacy-choices)管理本網站的可選追蹤。受支援的全球隱私控制訊號會將本網站對應的廣告及資料共享偏好設為退出。結帳開放後，已儲存的選擇會傳遞給Shopify用於該次結帳。',
         `也可透過 [${email}](mailto:${email}) 提交隱私選擇或投訴。Shopify相關選擇可在[Shopify隱私入口](https://privacy.shopify.com/)辦理。`,
         '資料處理方式發生重大變化時，本政策會相應更新，並按適用法律要求通知您。'
       ] }
@@ -721,7 +721,7 @@ const ja = {
       ] },
       { heading: 'Shopifyの拡張サービス', paragraphs: [
         '当店でShopify Network Intelligenceを有効にした場合、Shopifyは当店とのやり取りに関する情報を、他の販売事業者やShopifyとのやり取りと合わせ、パーソナライズや広告関連などの拡張サービスに利用します。[Shopifyの消費者向けプライバシーポリシー](https://www.shopify.com/legal/privacy/consumers)をご覧ください。',
-        '米国の一部の州法では、こうした利用が情報の共有またはターゲティング広告に当たる場合があります。[プライバシーの選択](#privacy-choices)と[Shopifyのプライバシーポータル](https://privacy.shopify.com/)から、適用される選択を行えます。'
+        '米国の一部の州法では、こうした利用が情報の共有またはターゲティング広告に当たる場合があります。Shopifyアカウントとプラットフォーム全体の選択は、[Shopifyのプライバシーポータル](https://privacy.shopify.com/)で管理できます。'
       ] },
       { heading: 'Cookieと任意のアクセス解析', paragraphs: [
         '必須Cookieと同様の保存機能は、カート、ログイン、安全対策と設定の保存に使用します。任意の解析・広告技術は、サイトでの選択とお客様の地域に適用される要件に従って動作します。',
@@ -737,7 +737,7 @@ const ja = {
         `請求は [${email}](mailto:${email}) へお送りください。原則として2営業日以内に受領をご案内し、適用される法定期間内に対応します。`
       ] },
       { heading: 'プライバシーの選択', paragraphs: [
-        'このページの管理機能から、任意のCookieとデータ共有の選択を確認できます。法令で必要となる場合、対応するGlobal Privacy Control信号を、該当する共有・広告の選択に適用します。',
+        '[プライバシーの選択](#privacy-choices)では、このサイトの任意のトラッキングを管理できます。対応するGlobal Privacy Control信号により、このサイトの該当する広告とデータ共有の設定をオプトアウトにします。チェックアウトの提供開始後、保存した選択を、そのチェックアウトのためにShopifyへ送信します。',
         `プライバシーの選択や苦情は [${email}](mailto:${email}) でも受け付けます。Shopifyに関する選択は[Shopifyのプライバシーポータル](https://privacy.shopify.com/)でも行えます。`,
         '情報の取り扱いに重要な変更がある場合は、本ポリシーを更新し、適用法で必要となる通知を行います。'
       ] }
@@ -870,7 +870,7 @@ const ko = {
       ] },
       { heading: 'Shopify 향상된 서비스', paragraphs: [
         '스토어에서 Shopify Network Intelligence가 활성화된 경우 Shopify는 이 스토어와의 상호작용 정보를 다른 판매자 및 Shopify와의 상호작용과 함께 처리하여 개인화와 광고 관련 기능 등의 향상된 서비스를 제공합니다. [Shopify 소비자 개인정보 처리방침](https://www.shopify.com/legal/privacy/consumers)을 참고해 주세요.',
-        '일부 이용은 미국 일부 주의 개인정보법상 공유 또는 맞춤형 광고에 해당할 수 있습니다. [개인정보 선택](#privacy-choices) 및 [Shopify 개인정보 포털](https://privacy.shopify.com/)에서 해당 선택권을 행사할 수 있습니다.'
+        '일부 이용은 미국 일부 주의 개인정보법상 공유 또는 맞춤형 광고에 해당할 수 있습니다. Shopify 계정 및 플랫폼 전체의 선택은 [Shopify 개인정보 포털](https://privacy.shopify.com/)에서 관리할 수 있습니다.'
       ] },
       { heading: '쿠키 및 선택적 분석', paragraphs: [
         '필수 쿠키와 유사 저장 기능은 장바구니, 로그인, 보안과 설정 저장을 지원합니다. 선택적 분석 및 광고 기술은 사이트에 표시된 선택과 고객 지역의 적용 요건에 따라 작동합니다.',
@@ -886,7 +886,7 @@ const ko = {
         `요청은 [${email}](mailto:${email})로 보내 주세요. 통상 2영업일 이내에 접수 안내를 드리고 적용되는 법정 기간 안에 처리합니다.`
       ] },
       { heading: '개인정보 선택', paragraphs: [
-        '이 페이지의 개인정보 제어 기능에서 선택적 쿠키 및 정보 공유 설정을 확인할 수 있습니다. 법률이 요구하는 범위에서 지원되는 Global Privacy Control 신호를 관련 공유 및 광고 선택에 적용합니다.',
+        '[개인정보 선택](#privacy-choices)에서 이 웹사이트의 선택적 추적을 관리할 수 있습니다. 지원되는 Global Privacy Control 신호는 이 사이트의 해당 광고 및 정보 공유 설정을 거부로 적용합니다. 결제가 제공되면 저장된 선택을 해당 결제를 위해 Shopify에 전달합니다.',
         `개인정보 선택이나 불만 사항은 [${email}](mailto:${email})로도 보낼 수 있습니다. Shopify 관련 선택은 [Shopify 개인정보 포털](https://privacy.shopify.com/)에서도 가능합니다.`,
         '정보 처리 방식에 중요한 변경이 있으면 이 방침을 갱신하고 적용 법률에서 요구하는 안내를 제공합니다.'
       ] }
