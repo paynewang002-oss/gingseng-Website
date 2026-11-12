@@ -27,7 +27,10 @@
   if (!Array.isArray(cart)) cart = [];
   cart = cart.filter(line => typeof line.handle === 'string' && typeof line.variantId === 'string' && Number.isInteger(line.quantity) && line.quantity > 0 && line.quantity <= 99).slice(0, 50);
   let consent = stored('ginseng-privacy', null);
-  const gpc = navigator.globalPrivacyControl === true;
+  if (consent && (typeof consent.analytics !== 'boolean' || typeof consent.marketing !== 'boolean')) consent = null;
+  let gpc = navigator.globalPrivacyControl === true;
+  const privacyForm = document.querySelector('[data-privacy-settings]');
+  let privacyFormEdited = false;
   let analyticsLoaded = false;
   let analyticsConsentInitialized = false;
 
@@ -331,6 +334,18 @@
     if (dialog && !dialog.open) dialog.showModal();
   }
 
+  const photoDialog = document.getElementById('about-photo-dialog');
+  document.querySelectorAll('[data-about-photo]').forEach(link => link.addEventListener('click', event => {
+    if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    const image = photoDialog.querySelector('[data-about-full-image]');
+    const caption = link.querySelector('img').alt;
+    image.src = link.href;
+    image.alt = caption;
+    document.getElementById('about-photo-title').textContent = caption;
+    openDialog(photoDialog);
+  }));
+
   document.querySelectorAll('[data-open-cart]').forEach(link => link.addEventListener('click', event => {
     event.preventDefault();
     renderCart();
@@ -458,13 +473,12 @@
   }));
 
   function trackingChoices() {
-    return { analytics: consent?.analytics === true, marketing: !gpc && consent?.marketing === true, preferences: true, sale_of_data: !gpc && consent?.marketing === true };
+    const choices = consent || config.privacyDefaults || {};
+    return { analytics: choices.analytics === true, marketing: !gpc && choices.marketing === true, preferences: true, sale_of_data: !gpc && choices.marketing === true };
   }
 
   function checkoutPrivacyChoices() {
-    if (!consent && !gpc) return undefined;
     const choices = trackingChoices();
-    if (!consent) return { marketing: false, saleOfData: false };
     return { analytics: choices.analytics, preferences: choices.preferences, marketing: choices.marketing, saleOfData: choices.sale_of_data };
   }
 
@@ -501,33 +515,30 @@
   function setConsent(analytics, marketing) {
     consent = { analytics: Boolean(analytics), marketing: Boolean(marketing) && !gpc, version: 1, savedAt: new Date().toISOString() };
     save('ginseng-privacy', consent);
-    document.getElementById('cookie-banner').hidden = true;
     applyTrackingChoices();
   }
 
-  function privacyDialog() {
-    document.getElementById('consent-analytics').checked = consent?.analytics === true;
+  function updatePrivacyControls() {
+    if (!privacyForm) return;
+    const choices = trackingChoices();
     const marketing = document.getElementById('consent-marketing');
-    marketing.checked = consent?.marketing === true && !gpc;
+    if (!privacyFormEdited) {
+      document.getElementById('consent-analytics').checked = choices.analytics;
+      marketing.checked = choices.marketing;
+    }
+    if (gpc) marketing.checked = false;
     marketing.disabled = gpc;
-    document.querySelector('[data-gpc-notice]').hidden = !gpc;
-    openDialog(document.getElementById('privacy-dialog'));
+    privacyForm.querySelector('[data-gpc-notice]').hidden = !gpc;
   }
 
-  document.querySelectorAll('[data-privacy-choices]').forEach(button => button.addEventListener('click', privacyDialog));
-  document.querySelectorAll('a[href$="#privacy-choices"]').forEach(link => link.addEventListener('click', event => {
-    const target = new URL(link.href, window.location.href);
-    if (target.pathname === window.location.pathname) {
-      event.preventDefault();
-      privacyDialog();
-    }
-  }));
-  document.querySelectorAll('[data-consent]').forEach(button => button.addEventListener('click', () => setConsent(button.dataset.consent === 'all', button.dataset.consent === 'all')));
-  document.querySelector('[data-save-consent]')?.addEventListener('click', () => {
-    setConsent(document.getElementById('consent-analytics').checked, document.getElementById('consent-marketing').checked);
-    document.getElementById('privacy-dialog').close();
+  privacyForm?.addEventListener('input', () => { privacyFormEdited = true; });
+  privacyForm?.addEventListener('submit', event => {
+    event.preventDefault();
+    const values = new FormData(privacyForm);
+    setConsent(values.get('analytics') === 'on', values.get('marketing') === 'on');
+    privacyForm.querySelector('.form-status').textContent = c.choicesSaved;
   });
-  document.getElementById('cookie-banner').hidden = Boolean(consent);
+  updatePrivacyControls();
   applyTrackingChoices();
 
   async function initializeStore() {
@@ -537,6 +548,8 @@
     ]);
     if (results[0].status === 'fulfilled') {
       config = { ...config, ...results[0].value };
+      gpc = gpc || config.globalPrivacyControl === true;
+      updatePrivacyControls();
       if (Array.isArray(config.currencies)) config.currencies.forEach(item => {
         if (['USD', 'JPY', 'KRW', 'HKD', 'SGD'].includes(item.code) && Number.isFinite(Number(item.rate)) && Number(item.rate) > 0) rates.set(item.code, Number(item.rate));
       });

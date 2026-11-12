@@ -239,13 +239,19 @@ async function exchangeRates(env, request) {
   }
 }
 
+function trackingDefaults() {
+  // Optional services require a visitor choice until their processing basis is verified for this merchant.
+  return { analytics: false, marketing: false };
+}
+
 async function configuration(request, env) {
   const fx = await exchangeRates(env, request);
   const analytics = /^G-[A-Z0-9]+$/.test(env.GOOGLE_ANALYTICS_ID || '') ? env.GOOGLE_ANALYTICS_ID : undefined;
   return json({
     shopDomain: shopDomain(env), accountUrl: accountUrl(env), checkoutEnabled: checkoutConfigured(env),
     currencies: CURRENCIES.map(code => ({ code, rate: Number(fx.rates[code]) })),
-    currencyUpdatedAt: fx.date, currencySource: FX_URL, googleAnalyticsId: analytics
+    currencyUpdatedAt: fx.date, currencySource: FX_URL, googleAnalyticsId: analytics,
+    privacyDefaults: trackingDefaults(), globalPrivacyControl: request.headers.get('Sec-GPC') === '1'
   });
 }
 
@@ -348,7 +354,8 @@ function visitorConsent(request, input) {
   if (input !== undefined && (!input || typeof input !== 'object' || Array.isArray(input))) {
     throw new HttpError(400, 'INVALID_CONSENT', 'Please check your privacy choices.');
   }
-  const choices = {};
+  const defaults = trackingDefaults();
+  const choices = { analytics: defaults.analytics, preferences: true, marketing: defaults.marketing, saleOfData: defaults.marketing };
   for (const [key, value] of Object.entries(input || {})) {
     if (!['analytics', 'preferences', 'marketing', 'saleOfData'].includes(key) || typeof value !== 'boolean') {
       throw new HttpError(400, 'INVALID_CONSENT', 'Please check your privacy choices.');
@@ -359,7 +366,7 @@ function visitorConsent(request, input) {
     choices.marketing = false;
     choices.saleOfData = false;
   }
-  return Object.keys(choices).length ? choices : null;
+  return choices;
 }
 
 async function checkout(request, env) {

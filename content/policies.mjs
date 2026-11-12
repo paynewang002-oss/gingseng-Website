@@ -161,7 +161,9 @@ const en = {
       {
         heading: 'Cookies and optional analytics',
         paragraphs: [
-          'Essential cookies and similar storage support the cart, login, security and saved preferences. Optional analytics and advertising technologies are governed by the choices shown on the site and the requirements that apply in your location.',
+          'Essential cookies and similar storage support the cart, login, security and saved preferences.',
+          'Essential settings apply by default in every region. You can actively enable optional analytics and advertising using the preference controls displayed on this page. Saved choices determine which optional features may operate.',
+          'Saved refusals take priority over default settings. Supported Global Privacy Control signals are respected for the relevant advertising and data-sharing choices.',
           'Google Analytics is part of our planned analytics setup. When configured and activated under the applicable controls, it helps measure visits and shopping activity. The privacy controls identify the optional services available at that time.'
         ]
       },
@@ -183,7 +185,7 @@ const en = {
       {
         heading: 'Privacy choices',
         paragraphs: [
-          'Use [privacy choices](#privacy-choices) to manage optional tracking on this website. Supported Global Privacy Control signals set the relevant website advertising and data-sharing preferences to opt out. When checkout is available, saved choices are passed to Shopify for that checkout.',
+          'Use the preference controls on this page to review, save or withdraw optional tracking choices. When checkout is available, saved choices are passed to Shopify for that checkout.',
           `You can also send a privacy choice or complaint to [${email}](mailto:${email}). Shopify-specific choices are available through [Shopify’s privacy portal](https://privacy.shopify.com/).`,
           'Material changes to our data practices will be reflected in this notice and communicated when applicable law requires it.'
         ]
@@ -395,7 +397,9 @@ const zhHans = {
       {
         heading: 'Cookie与可选统计',
         paragraphs: [
-          '必要Cookie及类似存储用于购物车、登录、安全及保存偏好。可选统计和广告技术按网站提供的选择及您所在地的适用要求运行。',
+          '必要Cookie及类似存储用于购物车、登录、安全及保存偏好。',
+          '所有地区默认仅采用必要设置。可选统计和广告由您通过本页直接展示的偏好控制主动开启。网站按已保存的选择运行相应的可选功能。',
+          '已保存的拒绝选择优先于默认设置。受支持的全球隐私控制信号会应用于相应的广告及资料共享选择。',
           'Google Analytics属于计划配置的统计工具。实际配置并按相应控制启用后，用于衡量访问及购物活动。届时可用的可选服务以隐私控制界面为准。'
         ]
       },
@@ -417,7 +421,7 @@ const zhHans = {
       {
         heading: '隐私选择',
         paragraphs: [
-          '您可通过[隐私选择](#privacy-choices)管理本网站的可选追踪。受支持的全球隐私控制信号会将本网站对应的广告及资料共享偏好设为退出。结账开放后，已保存的选择会传递给Shopify用于该次结账。',
+          '您可通过本页的偏好控制查看、保存或撤回可选追踪选择。结账开放后，已保存的选择会传递给Shopify用于该次结账。',
           `也可通过 [${email}](mailto:${email}) 提交隐私选择或投诉。Shopify相关选择可在[Shopify隐私门户](https://privacy.shopify.com/)办理。`,
           '资料处理方式发生重大变化时，本政策会相应更新，并按适用法律要求通知您。'
         ]
@@ -575,7 +579,9 @@ const zhHant = {
         '部分用途可能被適用的美國州隱私法認定為資料共享或定向廣告。Shopify帳戶及平台層面的選擇可透過[Shopify隱私入口](https://privacy.shopify.com/)管理。'
       ] },
       { heading: 'Cookie與可選統計', paragraphs: [
-        '必要Cookie及類似儲存用於購物車、登入、安全及保存偏好。可選統計和廣告技術按網站提供的選擇及您所在地的適用要求運行。',
+        '必要Cookie及類似儲存用於購物車、登入、安全及保存偏好。',
+        '所有地區預設僅採用必要設定。可選統計和廣告由您透過本頁直接顯示的偏好控制主動開啟。網站按已儲存的選擇運行相應的可選功能。',
+        '已儲存的拒絕選擇優先於預設。受支援的全球隱私控制訊號會套用於相應的廣告及資料共享選擇。',
         'Google Analytics屬於計劃設定的統計工具。實際設定並按相應控制啟用後，用於衡量造訪及購物活動。屆時可用的可選服務以隱私控制介面為準。'
       ] },
       { heading: '電子郵件訂閱', paragraphs: [
@@ -588,7 +594,7 @@ const zhHant = {
         `請將請求傳送至 [${email}](mailto:${email})。我們通常在兩個工作天內確認收到諮詢，並在適用法定期限內處理。`
       ] },
       { heading: '隱私選擇', paragraphs: [
-        '您可透過[隱私選擇](#privacy-choices)管理本網站的可選追蹤。受支援的全球隱私控制訊號會將本網站對應的廣告及資料共享偏好設為退出。結帳開放後，已儲存的選擇會傳遞給Shopify用於該次結帳。',
+        '您可透過本頁的偏好控制查看、儲存或撤回可選追蹤選擇。結帳開放後，已儲存的選擇會傳遞給Shopify用於該次結帳。',
         `也可透過 [${email}](mailto:${email}) 提交隱私選擇或投訴。Shopify相關選擇可在[Shopify隱私入口](https://privacy.shopify.com/)辦理。`,
         '資料處理方式發生重大變化時，本政策會相應更新，並按適用法律要求通知您。'
       ] }
@@ -724,7 +730,9 @@ const ja = {
         '米国の一部の州法では、こうした利用が情報の共有またはターゲティング広告に当たる場合があります。Shopifyアカウントとプラットフォーム全体の選択は、[Shopifyのプライバシーポータル](https://privacy.shopify.com/)で管理できます。'
       ] },
       { heading: 'Cookieと任意のアクセス解析', paragraphs: [
-        '必須Cookieと同様の保存機能は、カート、ログイン、安全対策と設定の保存に使用します。任意の解析・広告技術は、サイトでの選択とお客様の地域に適用される要件に従って動作します。',
+        '必須Cookieと同様の保存機能は、カート、ログイン、安全対策と設定の保存に使用します。',
+        'すべての地域で、初期設定は必須の機能に限定します。任意のアクセス解析と広告機能は、このページ内の設定項目からお客様が明示的に有効にできます。保存した選択に従って、該当する任意の機能を動作させます。',
+        '保存された拒否の選択を初期設定より優先します。対応するGlobal Privacy Control信号を、該当する広告とデータ共有の選択に適用します。',
         'Google Analyticsは導入を予定している解析サービスです。設定後、該当する管理機能に従って有効にした場合、訪問と購入行動の測定に利用します。その時点で利用できる任意のサービスは、プライバシー管理画面でご確認いただけます。'
       ] },
       { heading: 'メールの購読', paragraphs: [
@@ -737,7 +745,7 @@ const ja = {
         `請求は [${email}](mailto:${email}) へお送りください。原則として2営業日以内に受領をご案内し、適用される法定期間内に対応します。`
       ] },
       { heading: 'プライバシーの選択', paragraphs: [
-        '[プライバシーの選択](#privacy-choices)では、このサイトの任意のトラッキングを管理できます。対応するGlobal Privacy Control信号により、このサイトの該当する広告とデータ共有の設定をオプトアウトにします。チェックアウトの提供開始後、保存した選択を、そのチェックアウトのためにShopifyへ送信します。',
+        'このページ内の設定項目から、任意のトラッキングの選択を確認、保存、撤回できます。チェックアウトの提供開始後、保存した選択を、そのチェックアウトのためにShopifyへ送信します。',
         `プライバシーの選択や苦情は [${email}](mailto:${email}) でも受け付けます。Shopifyに関する選択は[Shopifyのプライバシーポータル](https://privacy.shopify.com/)でも行えます。`,
         '情報の取り扱いに重要な変更がある場合は、本ポリシーを更新し、適用法で必要となる通知を行います。'
       ] }
@@ -873,7 +881,9 @@ const ko = {
         '일부 이용은 미국 일부 주의 개인정보법상 공유 또는 맞춤형 광고에 해당할 수 있습니다. Shopify 계정 및 플랫폼 전체의 선택은 [Shopify 개인정보 포털](https://privacy.shopify.com/)에서 관리할 수 있습니다.'
       ] },
       { heading: '쿠키 및 선택적 분석', paragraphs: [
-        '필수 쿠키와 유사 저장 기능은 장바구니, 로그인, 보안과 설정 저장을 지원합니다. 선택적 분석 및 광고 기술은 사이트에 표시된 선택과 고객 지역의 적용 요건에 따라 작동합니다.',
+        '필수 쿠키와 유사 저장 기능은 장바구니, 로그인, 보안과 설정 저장을 지원합니다.',
+        '모든 지역에서 필수 설정을 기본으로 적용합니다. 선택적 분석과 광고는 이 페이지의 설정 항목에서 고객이 직접 활성화할 수 있습니다. 저장된 선택에 따라 해당 선택적 기능을 작동시킵니다.',
+        '저장된 거부 선택은 기본 설정보다 우선합니다. 지원되는 Global Privacy Control 신호는 해당 광고 및 정보 공유 선택에 적용합니다.',
         'Google Analytics는 도입 예정인 분석 도구입니다. 설정 후 해당 제어에 따라 활성화되면 방문 및 쇼핑 활동을 측정하는 데 사용합니다. 당시 이용 가능한 선택적 서비스는 개인정보 제어 화면에 안내됩니다.'
       ] },
       { heading: '이메일 구독', paragraphs: [
@@ -886,7 +896,7 @@ const ko = {
         `요청은 [${email}](mailto:${email})로 보내 주세요. 통상 2영업일 이내에 접수 안내를 드리고 적용되는 법정 기간 안에 처리합니다.`
       ] },
       { heading: '개인정보 선택', paragraphs: [
-        '[개인정보 선택](#privacy-choices)에서 이 웹사이트의 선택적 추적을 관리할 수 있습니다. 지원되는 Global Privacy Control 신호는 이 사이트의 해당 광고 및 정보 공유 설정을 거부로 적용합니다. 결제가 제공되면 저장된 선택을 해당 결제를 위해 Shopify에 전달합니다.',
+        '이 페이지의 설정 항목에서 선택적 추적에 대한 선택을 확인, 저장 또는 철회할 수 있습니다. 결제가 제공되면 저장된 선택을 해당 결제를 위해 Shopify에 전달합니다.',
         `개인정보 선택이나 불만 사항은 [${email}](mailto:${email})로도 보낼 수 있습니다. Shopify 관련 선택은 [Shopify 개인정보 포털](https://privacy.shopify.com/)에서도 가능합니다.`,
         '정보 처리 방식에 중요한 변경이 있으면 이 방침을 갱신하고 적용 법률에서 요구하는 안내를 제공합니다.'
       ] }

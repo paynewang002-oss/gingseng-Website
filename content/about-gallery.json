@@ -1,0 +1,291 @@
+{
+  "source": "白山传奇企业介绍8.15.pdf",
+  "groups": [
+    {
+      "id": "facilities",
+      "title": {
+        "en": "Facilities and production",
+        "ja": "企業と製造の風景",
+        "ko": "사업장과 생산 현장",
+        "zh-Hans": "厂区与生产",
+        "zh-Hant": "廠區與生產"
+      },
+      "images": [
+        {
+          "src": "/images/about/factory-exterior.webp",
+          "full": "/images/about/factory-exterior.webp",
+          "width": 1342,
+          "height": 652,
+          "alt": {
+            "en": "Factory exterior",
+            "ja": "工場外観",
+            "ko": "공장 외관",
+            "zh-Hans": "厂区外景",
+            "zh-Hant": "廠區外景"
+          },
+          "pdfPage": 14
+        },
+        {
+          "src": "/images/about/base-entrance.webp",
+          "full": "/images/about/base-entrance.webp",
+          "width": 1440,
+          "height": 1080,
+          "alt": {
+            "en": "Base entrance",
+            "ja": "栽培基地の入口",
+            "ko": "재배 기지 입구",
+            "zh-Hans": "基地入口",
+            "zh-Hant": "基地入口"
+          },
+          "pdfPage": 14
+        },
+        {
+          "src": "/images/about/production-equipment.webp",
+          "full": "/images/about/production-equipment.webp",
+          "width": 1402,
+          "height": 654,
+          "alt": {
+            "en": "Production equipment",
+            "ja": "製造設備",
+            "ko": "생산 설비",
+            "zh-Hans": "生产设备",
+            "zh-Hant": "生產設備"
+          },
+          "pdfPage": 15
+        },
+        {
+          "src": "/images/about/workshop-exterior.webp",
+          "full": "/images/about/workshop-exterior.webp",
+          "width": 1410,
+          "height": 669,
+          "alt": {
+            "en": "Workshop exterior",
+            "ja": "製造棟の外観",
+            "ko": "생산동 외관",
+            "zh-Hans": "车间外景",
+            "zh-Hant": "車間外景"
+          },
+          "pdfPage": 15
+        },
+        {
+          "src": "/images/about/testing-equipment.webp",
+          "full": "/images/about/testing-equipment.webp",
+          "width": 1600,
+          "height": 898,
+          "alt": {
+            "en": "Testing equipment",
+            "ja": "検査設備",
+            "ko": "검사 설비",
+            "zh-Hans": "检验设备",
+            "zh-Hant": "檢驗設備"
+          },
+          "pdfPage": 11
+        },
+        {
+          "src": "/images/about/testing-room.webp",
+          "full": "/images/about/testing-room.webp",
+          "width": 1600,
+          "height": 908,
+          "alt": {
+            "en": "Testing room",
+            "ja": "検査室",
+            "ko": "검사실",
+            "zh-Hans": "检验场景",
+            "zh-Hant": "檢驗場景"
+          },
+          "pdfPage": 11
+        }
+      ]
+    },
+    {
+      "id": "forest",
+      "title": {
+        "en": "Cultivation and harvesting",
+        "ja": "栽培地と収穫",
+        "ko": "재배지와 수확 현장",
+        "zh-Hans": "基地与采挖",
+        "zh-Hant": "基地與採挖"
+      },
+      "images": [
+        {
+          "src": "/images/about/mountain-landscape.webp",
+          "full": "/images/about/mountain-landscape.webp",
+          "width": 1600,
+          "height": 1067,
+          "alt": {
+            "en": "Mountain forest",
+            "ja": "山林の風景",
+            "ko": "산림 풍경",
+            "zh-Hans": "山林环境",
+            "zh-Hant": "山林環境"
+          },
+          "pdfPage": 4
+        },
+        {
+          "src": "/images/about/ginseng-in-forest.webp",
+          "full": "/images/about/ginseng-in-forest.webp",
+          "width": 1404,
+          "height": 1800,
+          "alt": {
+            "en": "Ginseng beneath the trees",
+            "ja": "木々の下の人参",
+            "ko": "나무 아래 인삼",
+            "zh-Hans": "林下人参",
+            "zh-Hant": "林下人參"
+          },
+          "pdfPage": 16
+        },
+        {
+          "src": "/images/about/ginseng-base.webp",
+          "full": "/images/about/ginseng-base.webp",
+          "width": 1600,
+          "height": 1068,
+          "alt": {
+            "en": "Forest ginseng base",
+            "ja": "森林の人参栽培地",
+            "ko": "산림 인삼 재배지",
+            "zh-Hans": "林下参基地",
+            "zh-Hant": "林下參基地"
+          },
+          "pdfPage": 16
+        },
+        {
+          "src": "/images/about/ginseng-plants.webp",
+          "full": "/images/about/ginseng-plants.webp",
+          "width": 960,
+          "height": 1280,
+          "alt": {
+            "en": "Ginseng plants in fruit",
+            "ja": "実をつけた人参",
+            "ko": "열매를 맺은 인삼",
+            "zh-Hans": "结果期人参植株",
+            "zh-Hant": "結果期人參植株"
+          },
+          "pdfPage": 16
+        },
+        {
+          "src": "/images/about/fresh-ginseng-root.webp",
+          "full": "/images/about/fresh-ginseng-root.webp",
+          "width": 1364,
+          "height": 956,
+          "alt": {
+            "en": "A freshly excavated root",
+            "ja": "掘り上げた人参",
+            "ko": "갓 채취한 인삼",
+            "zh-Hans": "采挖后的参根",
+            "zh-Hant": "採挖後的參根"
+          },
+          "pdfPage": 16
+        },
+        {
+          "src": "/images/owned-sowing.jpg",
+          "full": "/images/owned-sowing.jpg",
+          "width": 1600,
+          "height": 1067,
+          "alt": {
+            "en": "Planting beneath forest cover",
+            "ja": "木々の下での種まき",
+            "ko": "숲 아래 파종",
+            "zh-Hans": "山林间的播种作业",
+            "zh-Hant": "山林間的播種作業"
+          }
+        },
+        {
+          "src": "/images/owned-harvest.jpg",
+          "full": "/images/owned-harvest.jpg",
+          "width": 720,
+          "height": 576,
+          "alt": {
+            "en": "Ginseng harvesting",
+            "ja": "人参の掘り取り",
+            "ko": "인삼 채취",
+            "zh-Hans": "人参采挖",
+            "zh-Hant": "人參採挖"
+          }
+        }
+      ]
+    },
+    {
+      "id": "museum",
+      "title": {
+        "en": "Ginseng museum",
+        "ja": "人参博物館",
+        "ko": "인삼 박물관",
+        "zh-Hans": "人参博物馆",
+        "zh-Hant": "人參博物館"
+      },
+      "images": [
+        {
+          "src": "/images/about/museum-entrance.webp",
+          "full": "/images/about/museum-entrance.webp",
+          "width": 1600,
+          "height": 1093,
+          "alt": {
+            "en": "Ginseng museum entrance",
+            "ja": "人参博物館の入口",
+            "ko": "인삼 박물관 입구",
+            "zh-Hans": "人参博物馆入口",
+            "zh-Hant": "人參博物館入口"
+          },
+          "pdfPage": 17
+        },
+        {
+          "src": "/images/about/museum-exhibition-hall.webp",
+          "full": "/images/about/museum-exhibition-hall.webp",
+          "width": 1160,
+          "height": 648,
+          "alt": {
+            "en": "Museum exhibition hall",
+            "ja": "博物館の展示室",
+            "ko": "박물관 전시실",
+            "zh-Hans": "博物馆展厅",
+            "zh-Hant": "博物館展廳"
+          },
+          "pdfPage": 17
+        },
+        {
+          "src": "/images/about/museum-exhibition-panels.webp",
+          "full": "/images/about/museum-exhibition-panels.webp",
+          "width": 1140,
+          "height": 694,
+          "alt": {
+            "en": "Museum displays",
+            "ja": "博物館の展示",
+            "ko": "박물관 전시",
+            "zh-Hans": "博物馆展陈",
+            "zh-Hant": "博物館展陳"
+          },
+          "pdfPage": 17
+        },
+        {
+          "src": "/images/about/museum-manuscript.webp",
+          "full": "/images/about/museum-manuscript.webp",
+          "width": 1140,
+          "height": 658,
+          "alt": {
+            "en": "A manuscript on display",
+            "ja": "展示された文献",
+            "ko": "전시된 문헌",
+            "zh-Hans": "馆藏文献展示",
+            "zh-Hant": "館藏文獻展示"
+          },
+          "pdfPage": 18
+        },
+        {
+          "src": "/images/about/museum-ginseng-specimens.webp",
+          "full": "/images/about/museum-ginseng-specimens.webp",
+          "width": 1088,
+          "height": 652,
+          "alt": {
+            "en": "Ginseng specimens on display",
+            "ja": "人参標本の展示",
+            "ko": "인삼 표본 전시",
+            "zh-Hans": "人参标本展示",
+            "zh-Hant": "人參標本展示"
+          },
+          "pdfPage": 18
+        }
+      ]
+    }
+  ]
+}
