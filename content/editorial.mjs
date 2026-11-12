@@ -3,7 +3,7 @@ export const assets = [
   { id: 'forest', path: '/images/owned-forest.jpg', source: '图库/林下参基地/林下参照片/森林21.JPG', alt: 'Woodland canopy and forest floor', role: 'cultivation' },
   { id: 'sowing', path: '/images/owned-sowing.jpg', source: '图库/林下参基地/人参照片/人参照片/白山传奇万亩野山参基地播种期.jpg', alt: 'Planting work beneath forest cover', role: 'cultivation' },
   { id: 'root', path: '/images/owned-root-detail.jpg', source: '图库/林下参基地/人参照片/人参/鲜野山参（参王）.jpg', alt: 'A fresh ginseng root and its fine rootlets', role: 'botany' },
-  { id: 'fruit', path: '/images/owned-ginseng-fruit.jpg', source: '图库/林下参基地/林下参照片/林下参12.JPG', alt: 'Ginseng leaves and red fruit beneath trees', role: 'botany' },
+  { id: 'fruit', path: '/images/ginseng-berries-closeup-24.webp', source: '图库/林下参基地/林下参照片/林下参24.JPG', alt: 'A close-up of red ginseng berries', role: 'botany' },
   { id: 'museum', path: '/images/owned-museum.jpg', source: '图库/博物馆照片精简格式/DSC_7530 (复制).JPG', alt: 'Displays in a ginseng cultural exhibition', role: 'culture' },
   { id: 'root-in-forest', path: '/images/owned-root-in-forest.jpg', source: '图库/林下参基地/林谷鲜/林谷鲜/IMG_8109.JPG', alt: 'A ginseng root shown in a forest setting', role: 'people' },
   { id: 'harvest', path: '/images/owned-harvest.jpg', source: '图库/林下参采挖.mpg', sourceTimeSeconds: 150, alt: 'Careful excavation of a ginseng root', role: 'harvest' }
@@ -12,7 +12,7 @@ export const assets = [
 export const articles = [
   {
     slug: 'what-is-panax-ginseng',
-    image: '/images/owned-ginseng-fruit.jpg',
+    image: '/images/ginseng-berries-closeup-24.webp',
     published: '2026-11-12',
     sources: [
       { title: 'Asian ginseng botanical name — NIH Office of Dietary Supplements', url: 'https://ods.od.nih.gov/factsheets/Immunefunction-HealthProfessional/' },

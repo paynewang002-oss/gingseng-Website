@@ -87,7 +87,7 @@ async function home(language) {
   const c = ui[language.code];
   const h = homeContent[language.code];
   const r = retailUi[language.code];
-  return `<section class="forest-hero"><picture><source media="(max-width:620px)" srcset="/images/forest-ginseng-berries-mobile.webp"><img src="/images/forest-ginseng-berries.webp" width="1920" height="1281" alt="${c.companyPhoto}" fetchpriority="high"></picture><div class="hero-copy"><p>${r.origin}</p><h1>${r.homeHeading}</h1><a class="button" href="${pathFor(language, 'products')}">${c.browse}</a></div></section>
+  return `<section class="forest-hero"><picture><source media="(max-width:620px)" srcset="/images/forest-ginseng-15-mobile.webp"><img src="/images/forest-ginseng-15.webp" width="1920" height="1281" alt="${c.companyPhoto}" fetchpriority="high"></picture><div class="hero-copy"><p>${r.origin}</p><h1>${r.homeHeading}</h1><a class="button" href="${pathFor(language, 'products')}">${c.browse}</a></div></section>
     <section class="home-products section-wrap"><div class="section-heading"><h2>${c.productsTitle}</h2><a href="${pathFor(language, 'products')}">${c.products}</a></div><div class="product-grid" data-product-list="featured">${products.map(product => productCard(product, language)).join('')}</div><p class="fine-print">${c.shippingNote}</p></section>
     <section class="home-origin"><figure><img src="/images/changbai-tianchi.jpg" width="1600" height="1067" loading="lazy" alt="${h.lake}"></figure><div><h2>${r.origin}</h2><p>${h.history}</p><a href="${pathFor(language, 'about')}">${c.about}</a></div></section>
     <section class="section-wrap knowledge-section"><div class="section-heading"><h2>${c.knowledgeTitle}</h2><a href="${pathFor(language, 'knowledge')}">${c.allArticles}</a></div><div class="article-grid">${articles.map(article => articleCard(article, language)).join('')}</div></section>
@@ -122,7 +122,7 @@ function aboutPage(language) {
 const pages = [];
 for (const language of languages) {
   const c = ui[language.code];
-  pages.push({ language, route: '', title: homeContent[language.code].title, description: homeContent[language.code].description, kind: 'home', body: await home(language), image: '/images/forest-ginseng-berries.webp' });
+  pages.push({ language, route: '', title: homeContent[language.code].title, description: homeContent[language.code].description, kind: 'home', body: await home(language), image: '/images/forest-ginseng-15.webp' });
   pages.push({ language, route: 'products', title: c.productsTitle, description: c.productsIntro, kind: 'products', body: `<section class="page-intro forest-intro"><h1>${c.productsTitle}</h1></section><section class="section-wrap shop-section"><div class="product-grid" data-product-list="all">${products.map(product => productCard(product, language)).join('')}</div><p class="fine-print">${c.shippingNote}</p><p class="fine-print converted-note" data-converted-note hidden>${c.approximate}</p></section>` });
   for (const product of products) pages.push({ language, route: `products/${product.handle}`, title: c.productTitles[product.key], description: c.productDescriptions[product.key], kind: 'product', product, body: productPage(product, language), image: product.images[0].url });
   pages.push({ language, route: 'products/_template', title: c.products, description: c.productsIntro, kind: 'product', noindex: true, template: true, body: dynamicProductPage(language) });
