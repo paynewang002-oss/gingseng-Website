@@ -15,7 +15,7 @@
     "SHOPIFY_STORE_DOMAIN": "76wrav-pz.myshopify.com",
     "SHOPIFY_CLIENT_ID": "8392dbe866975c5058d98a5deacb4a9d",
     "SHOPIFY_ACCOUNT_URL": "https://shopify.com/81127211146/account",
-    "CHECKOUT_ENABLED": "false"
+    "CHECKOUT_ENABLED": "true"
   },
   "d1_databases": [
     {
